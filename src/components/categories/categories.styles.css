@@ -1,7 +1,7 @@
-.main-page {
+.main-categories {
   padding: 0 70px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   gap: 20px;

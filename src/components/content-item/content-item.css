@@ -1,9 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap");
+
 .content-item {
+  position: relative;
   display: grid;
   place-items: center;
-  flex: 1 0 calc(33% - 10px);
+  overflow: hidden;
+}
+.content-item:not(.large) {
+  width: calc(33.33% - 15px);
   height: 300px;
-  border: 1px solid black;
+}
+
+.content-item.large {
+  width: calc(50% - 10px);
+  height: 400px;
+}
+
+.content-item .image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  background-position: center;
+  background-size: cover;
+  transition: all 1s;
+}
+
+.content-item:hover .image {
+  transition: all 3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+  transform: scale(1.1);
+}
+.content-item:hover .content {
+  opacity: 0.8;
 }
 
 .content {
@@ -11,13 +39,19 @@
   flex-direction: column;
   align-items: center;
   padding: 20px 40px;
-  border: 1px solid black;
+  background-color: #fff;
+  color: #000;
+  text-decoration: none;
+  opacity: 0.6;
 }
 
 .content .title {
+  font-family: "Open Sans Condensed", sans-serif;
+  text-transform: uppercase;
   margin: 0 0 20px;
 }
 
 .content .subtitle {
+  font-family: "Open Sans Condensed", sans-serif;
   text-transform: uppercase;
 }
