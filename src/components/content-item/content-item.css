@@ -1,0 +1,23 @@
+.content-item {
+  display: grid;
+  place-items: center;
+  flex: 1 0 calc(33% - 10px);
+  height: 300px;
+  border: 1px solid black;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 40px;
+  border: 1px solid black;
+}
+
+.content .title {
+  margin: 0 0 20px;
+}
+
+.content .subtitle {
+  text-transform: uppercase;
+}
