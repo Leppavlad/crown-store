@@ -1,0 +1,14 @@
+.sign-in {
+  flex: 0 1 425px;
+}
+
+form {
+  margin-top: 40px;
+}
+
+.form-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 40px;
+}

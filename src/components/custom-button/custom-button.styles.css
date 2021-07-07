@@ -1,0 +1,42 @@
+.custom-button {
+  min-width: 170px;
+  width: auto;
+  height: 50px;
+  padding: 0 40px;
+  text-transform: uppercase;
+  border-width: 1px;
+  border-style: solid;
+  cursor: pointer;
+}
+
+.custom-button.black:not(:hover) {
+  background-color: #000;
+  border-color: #000;
+  color: #fff;
+}
+
+.custom-button.black:hover {
+  background-color: #fff;
+  border-color: #000;
+  color: #000;
+}
+
+.custom-button.black:focus {
+  outline: 2px solid #555;
+}
+
+.custom-button.blue:not(:hover) {
+  background-color: #4285f4;
+  border-color: #4285f4;
+  color: #fff;
+}
+
+.custom-button.blue:hover {
+  background-color: #fff;
+  border-color: #4285f4;
+  color: #4285f4;
+}
+
+.custom-button.blue:focus {
+  outline: 2px solid #555;
+}

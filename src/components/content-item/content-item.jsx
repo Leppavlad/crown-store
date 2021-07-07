@@ -1,18 +1,22 @@
 import "./content-item.css";
+import { withRouter } from "react-router-dom";
 
-const ContentItem = ({ title, imageUrl, linkUrl, size }) => {
+const ContentItem = ({ title, imageUrl, linkUrl, size, history, match }) => {
   return (
-    <div className={`content-item ${size ? size : ""}`}>
+    <div
+      className={`content-item ${size ? size : ""}`}
+      onClick={() => history.push(match.url + linkUrl)}
+    >
       <div
         className="image"
         style={{ backgroundImage: `url(${imageUrl})` }}
       ></div>
-      <a href={linkUrl} className="content">
+      <div className="content">
         <h1 className="title">{title}</h1>
         <span className="subtitle">Shop now</span>
-      </a>
+      </div>
     </div>
   );
 };
 
-export default ContentItem;
+export default withRouter(ContentItem);
