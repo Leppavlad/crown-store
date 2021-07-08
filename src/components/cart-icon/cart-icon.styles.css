@@ -1,0 +1,22 @@
+.cart {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 45px;
+}
+
+.cart__icon {
+  width: 34px;
+  height: auto;
+  cursor: pointer;
+}
+
+.cart__num {
+  pointer-events: none;
+  user-select: none;
+  position: absolute;
+  left: 27px;
+  top: 16px;
+}
