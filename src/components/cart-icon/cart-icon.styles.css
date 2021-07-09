@@ -17,6 +17,8 @@
   pointer-events: none;
   user-select: none;
   position: absolute;
-  left: 27px;
+  left: 19px;
   top: 16px;
+  width: 22px;
+  text-align: center;
 }

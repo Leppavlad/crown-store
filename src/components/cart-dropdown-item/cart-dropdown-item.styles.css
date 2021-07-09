@@ -1,0 +1,36 @@
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+* + .cart-item {
+  margin-top: 15px;
+}
+
+.cart-items__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 290px;
+  overflow-y: scroll;
+}
+
+.cart-item__image {
+  width: 70px;
+  height: 100px;
+}
+
+.cart-item__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cart-item__name {
+  margin: 0;
+}
+
+.cart-item__sum {
+  margin: 10px 0 0;
+}

@@ -40,3 +40,35 @@
 .custom-button.blue:focus {
   outline: 2px solid #555;
 }
+
+.custom-button.white:not(:hover) {
+  background-color: #fff;
+  border-color: transparent;
+  color: #fff;
+}
+
+.custom-button.white:hover {
+  background-color: #000;
+  border-color: #000;
+  color: #fff;
+}
+
+.custom-button.white:focus {
+  outline: 2px solid #555;
+}
+
+.custom-button.white.transparent:not(:hover) {
+  background-color: #ffffff99;
+  border-color: transparent;
+  color: #fff;
+}
+
+.custom-button.white.transparent:hover {
+  background-color: #000;
+  border-color: #000;
+  color: #fff;
+}
+
+.custom-button.white.transparent:focus {
+  outline: 2px solid #555;
+}

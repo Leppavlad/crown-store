@@ -1,3 +1,4 @@
 export const cartActionTypes = {
   TOGGLE_DROPDOWN_VISIBILITY: "TOGGLE_DROPDOWN_VISIBILITY",
+  ADD_ITEM: "ADD_ITEM",
 };

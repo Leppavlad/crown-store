@@ -9,6 +9,22 @@
   background-repeat: no-repeat;
 }
 
+.item__card:hover .item__image__bgBright {
+  display: flex;
+}
+
+.item__image__bgBright {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.item__image button {
+  margin: auto 30px 20px;
+  width: 100%;
+}
+
 .item__text {
   height: 40px;
   display: flex;
