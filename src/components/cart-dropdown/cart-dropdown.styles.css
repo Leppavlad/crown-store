@@ -15,3 +15,9 @@
 .cart__dropdown button {
   margin-top: auto;
 }
+
+.cart__dropdown .empty {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 20px;
+}

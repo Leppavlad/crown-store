@@ -1,0 +1,49 @@
+.checkout__header {
+  display: flex;
+  justify-content: space-between;
+  width: 800px;
+  margin: 70px auto 0;
+}
+
+.checkout__list {
+  position: relative;
+  width: 800px;
+  margin: 45px auto 0;
+}
+.checkout__list::before,
+.checkout__list::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #bbb;
+}
+.checkout__list::before {
+  top: -20px;
+}
+.checkout__list::after {
+  bottom: -20px;
+}
+
+.checkout__block_large {
+  flex: 0 0 150px;
+}
+.checkout__block_medium {
+  flex: 0 0 100px;
+}
+.checkout__remove_small {
+  flex: 0 0 50px;
+}
+
+.checkout__empty {
+  width: 800px;
+  margin: 40px auto 0;
+  font-size: 36px;
+}
+
+.checkout__total {
+  width: 800px;
+  margin: 40px auto 0;
+  text-align: end;
+  font-size: 36px;
+}
