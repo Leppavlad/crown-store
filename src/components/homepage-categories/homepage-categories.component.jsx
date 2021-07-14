@@ -1,17 +1,17 @@
 import React from "react";
-import ContentItem from "../../components/content-item/content-item";
-import "./categories.styles.css";
+import HomepageItem from "../homepage-item/homepage-item";
+import "./homepage-categories.styles.css";
 
 import { connect } from "react-redux";
 import { selectSections } from "../../redux/categories/categories.selectors";
 import { createStructuredSelector } from "reselect";
 
-const Categories = ({ sections }) => {
+const HomepageCategories = ({ sections }) => {
   return (
     <div className="main-categories">
       {sections.map((item) => {
         const { id, ...props } = item;
-        return <ContentItem key={id} {...props} />;
+        return <HomepageItem key={id} {...props} />;
       })}
     </div>
   );
@@ -21,4 +21,4 @@ const mapStateToProps = createStructuredSelector({
   sections: selectSections,
 });
 
-export default connect(mapStateToProps)(Categories);
+export default connect(mapStateToProps)(HomepageCategories);

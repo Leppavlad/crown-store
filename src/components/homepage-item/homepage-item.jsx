@@ -1,7 +1,7 @@
-import "./content-item.css";
+import "./homepage-item.css";
 import { withRouter } from "react-router-dom";
 
-const ContentItem = ({ title, imageUrl, linkUrl, size, history, match }) => {
+const HomepageItem = ({ title, imageUrl, linkUrl, size, history, match }) => {
   return (
     <div
       className={`content-item ${size ? size : ""}`}
@@ -19,4 +19,4 @@ const ContentItem = ({ title, imageUrl, linkUrl, size, history, match }) => {
   );
 };
 
-export default withRouter(ContentItem);
+export default withRouter(HomepageItem);

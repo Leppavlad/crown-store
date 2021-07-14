@@ -1,11 +1,11 @@
 import React from "react";
-import Categories from "../../components/categories/categories.component";
+import HomepageCategories from "../../components/homepage-categories/homepage-categories.component";
 import "./homepage.styles.css";
 
 const Homepage = () => {
   return (
     <div className="main-page">
-      <Categories />
+      <HomepageCategories />
     </div>
   );
 };
