@@ -9,8 +9,6 @@ import CollectionItem from "../../components/collection-item/collection-item.com
 import "./collection.styles.css";
 
 const Collection = ({ match, collection }) => {
-  console.log(match);
-  console.log(collection);
   return (
     <div className="collection">
       <h2>{collection.title}</h2>
