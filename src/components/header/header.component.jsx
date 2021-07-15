@@ -1,8 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
 
-import { Link } from "react-router-dom";
-
 import { auth } from "../../firebase/firebase.utils";
 
 import { createStructuredSelector } from "reselect";
@@ -12,44 +10,46 @@ import { selectDropdownVisibility } from "../../redux/cart/cart.selectors";
 import { ReactComponent as Logo } from "../../assets/icons/logo.svg";
 import CartIcon from "../cart-icon/cart-icon.component";
 import CartDropdown from "../cart-dropdown/cart-dropdown.component";
-import "./header.styles.css";
 
-const Header = ({ currentUser, dropdownIsShown }) => {
+import {
+  Header,
+  HeaderLogo,
+  HeaderNav,
+  MenuList,
+  MenuListItem,
+  MenuLink,
+} from "./header.styles";
+
+const TheHeader = ({ currentUser, dropdownIsShown }) => {
   return (
-    <div className="header">
-      <Link to="/" className="header__logo">
+    <Header>
+      <HeaderLogo to="/">
         <Logo />
-      </Link>
-      <nav className="header-nav">
-        <ul className="header-nav__list">
-          <li className="header-nav__item">
-            <Link to="/shop" className="header-nav__link">
-              Shop
-            </Link>
-          </li>
-          <li className="header-nav__item">
-            <Link to="/contact" className="header-nav__link">
-              Contact
-            </Link>
-          </li>
-          <li className="header-nav__item">
+      </HeaderLogo>
+      <HeaderNav>
+        <MenuList>
+          <MenuListItem>
+            <MenuLink to="/shop">Shop</MenuLink>
+          </MenuListItem>
+          <MenuListItem>
+            <MenuLink to="/contact">Contact</MenuLink>
+          </MenuListItem>
+          <MenuListItem>
             {currentUser ? (
-              <div className="header-nav__link" onClick={() => auth.signOut()}>
+              <MenuLink as="div" onClick={() => auth.signOut()}>
                 Sign Out
-              </div>
+              </MenuLink>
             ) : (
-              <Link className="header-nav__link" to="/auth">
-                Sign in
-              </Link>
+              <MenuLink to="/auth">Sign in</MenuLink>
             )}
-          </li>
-          <li className="header-nav__item header__cart">
+          </MenuListItem>
+          <MenuListItem>
             <CartIcon />
-          </li>
-        </ul>
+          </MenuListItem>
+        </MenuList>
         {dropdownIsShown ? <CartDropdown /> : null}
-      </nav>
-    </div>
+      </HeaderNav>
+    </Header>
   );
 };
 
@@ -58,4 +58,4 @@ const mapStateToProps = createStructuredSelector({
   dropdownIsShown: selectDropdownVisibility,
 });
 
-export default connect(mapStateToProps)(Header);
+export default connect(mapStateToProps)(TheHeader);

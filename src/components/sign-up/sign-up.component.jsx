@@ -86,7 +86,7 @@ export default class SignUp extends React.Component {
             onChange={this.handleInput}
             required
           />
-          <CustomButton type="submit" className="black">
+          <CustomButton type="submit" mode="black">
             Sign up
           </CustomButton>
         </form>

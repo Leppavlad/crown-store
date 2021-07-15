@@ -16,7 +16,7 @@ const CollectionItem = ({ item, addItemToCart }) => {
       >
         <div className="item__image__bgBright">
           <CustomButton
-            className="white transparent"
+            mode="whiteTransparent"
             onClick={() => addItemToCart({ id, name, price, imageUrl })}
           >
             Add to cart

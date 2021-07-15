@@ -9,7 +9,7 @@ import { setCurrentUser } from "./redux/user/user.actions";
 import { createStructuredSelector } from "reselect";
 import { selectCurrentUser } from "./redux/user/user.selectors";
 
-import Header from "./components/header/header.component";
+import TheHeader from "./components/header/header.component";
 
 import Homepage from "./pages/homepage/homepage.component";
 import Shop from "./pages/shop/shop.component";
@@ -50,7 +50,7 @@ class App extends React.Component {
     return (
       <BrowserRouter>
         <div className="App">
-          <Header />
+          <TheHeader />
           <Switch>
             <Route exact path="/" component={Homepage} />
             <Route path="/shop" component={Shop} />

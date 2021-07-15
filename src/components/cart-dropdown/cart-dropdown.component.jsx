@@ -29,7 +29,7 @@ const CartDropdown = ({ cartItems, history, dispatch }) => {
           history.push("/checkout");
           dispatch(toggleDropdownVisibility());
         }}
-        className="black"
+        mode="black"
       >
         Go to checkout
       </CustomButton>
