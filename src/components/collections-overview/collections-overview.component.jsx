@@ -5,13 +5,12 @@ import Collection from "../../components/collection/collection.component";
 
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
-import { selectCollections } from "../../redux/shop/shop.selectors";
+import { selectCollectionAsArray } from "../../redux/shop/shop.selectors";
 
 const CollectionsOverview = ({ collections }) => {
   return (
     <div className="collections-overview">
-      {Object.keys(collections).map((key) => {
-        const { id, ...data } = collections[key];
+      {collections.map(({ id, ...data }) => {
         return <Collection key={id} {...data} />;
       })}
     </div>
@@ -19,7 +18,7 @@ const CollectionsOverview = ({ collections }) => {
 };
 
 const MapStateToProps = createStructuredSelector({
-  collections: selectCollections,
+  collections: selectCollectionAsArray,
 });
 
 export default connect(MapStateToProps)(CollectionsOverview);
