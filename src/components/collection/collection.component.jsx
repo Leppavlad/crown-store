@@ -9,7 +9,7 @@ const Collection = ({ title, items }) => {
       <h2>{title}</h2>
       <div className="collection-list">
         {items
-          .filter((item, index) => index < 4)
+          .filter((_, index) => index < 4)
           .map((item) => (
             <CollectionItem key={item.id} item={item} />
           ))}
