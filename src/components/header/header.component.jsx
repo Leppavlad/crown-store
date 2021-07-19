@@ -1,11 +1,11 @@
 import React from "react";
 import { connect } from "react-redux";
 
-import { auth } from "../../firebase/firebase.utils";
-
 import { createStructuredSelector } from "reselect";
 import { selectCurrentUser } from "../../redux/user/user.selectors";
 import { selectDropdownVisibility } from "../../redux/cart/cart.selectors";
+
+import { signOutStart } from "../../redux/user/user.actions";
 
 import { ReactComponent as Logo } from "../../assets/icons/logo.svg";
 import CartIcon from "../cart-icon/cart-icon.component";
@@ -20,7 +20,7 @@ import {
   MenuLink,
 } from "./header.styles";
 
-const TheHeader = ({ currentUser, dropdownIsShown }) => {
+const TheHeader = ({ currentUser, dropdownIsShown, signOutStart }) => {
   return (
     <Header>
       <HeaderLogo to="/">
@@ -36,7 +36,7 @@ const TheHeader = ({ currentUser, dropdownIsShown }) => {
           </MenuListItem>
           <MenuListItem>
             {currentUser ? (
-              <MenuLink as="div" onClick={() => auth.signOut()}>
+              <MenuLink as="div" onClick={signOutStart}>
                 Sign Out
               </MenuLink>
             ) : (
@@ -58,4 +58,8 @@ const mapStateToProps = createStructuredSelector({
   dropdownIsShown: selectDropdownVisibility,
 });
 
-export default connect(mapStateToProps)(TheHeader);
+const mapDispatchToProps = (dispatch) => ({
+  signOutStart: () => dispatch(signOutStart()),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(TheHeader);
