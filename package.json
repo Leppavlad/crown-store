@@ -1,6 +1,9 @@
 {
   "name": "commerce-store",
   "version": "0.1.0",
+  "engines": {
+    "node": "16.4.2"
+  },
   "private": true,
   "homepage": "https://leppavlad.github.io/",
   "dependencies": {
